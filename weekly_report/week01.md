@@ -48,7 +48,7 @@
 > keras 深度学习模块
 
 #### 数据探索性分析(EDA)  
-![amatar](src/EDA.jpg)  
+![amatar](https://github.com/final-Effort/laon_default_forecast/blob/master/weekly_report/src/EDA.jpg)  
 
 
 ### 数据清洗  
