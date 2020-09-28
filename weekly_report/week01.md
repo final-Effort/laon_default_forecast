@@ -7,7 +7,7 @@
 ## 主要模块
 
 本次课题可分为以下几个模块  
-![amatar](src/module.png)
+![amatar](src\module.png)
 
 ### 模型训练
 
@@ -24,7 +24,7 @@
 
 > K折交叉验证：将训练集分为K折，用K-1折作为训练集，用剩下一折作为验证集，将K-1折训练出的结果来预测测试集，运算K次
 
-![amatar](src/K_fold.png)
+![amatar](src\K_fold.png)
 
 ### 数据分析
 
@@ -48,7 +48,7 @@
 > keras 深度学习模块
 
 #### 数据探索性分析(EDA)  
-![amatar](src/EDA.png)  
+![amatar](src\EDA.png)  
 
 
 ### 数据清洗  
