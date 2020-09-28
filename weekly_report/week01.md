@@ -7,7 +7,7 @@
 ## 主要模块
 
 本次课题可分为以下几个模块  
-![amatar](src/module.jpg)
+![amatar](https://github.com/final-Effort/laon_default_forecast/blob/master/weekly_report/src/module.jpg)
 
 ### 模型训练
 
@@ -24,7 +24,7 @@
 
 > K折交叉验证：将训练集分为K折，用K-1折作为训练集，用剩下一折作为验证集，将K-1折训练出的结果来预测测试集，运算K次
 
-![amatar](src/K_fold.jpg)
+![amatar](https://github.com/final-Effort/laon_default_forecast/blob/master/weekly_report/src/K_fold.jpg)
 
 ### 数据分析
 
@@ -78,4 +78,4 @@
 ### 模型融合
 
 ### 心得
-作为数据小白，初次看到这个课题还是挺棘手的，毕竟第一次实操。刚开始还是无从下手的阶段，从给的学习资料中习得课题的初步框架，稍有头绪。了解到python对数据的处理更加简单方便，自学了python的一些基础语法及推荐的数据科学库，并分析了训练集中的数据。尚未着手代码实现，打算在第二周完成。
+作为数据小白，初次看到这个课题还是挺棘手的，毕竟第一次实操。刚开始还是无从下手的阶段，从给的学习资料中习得课题的初步框架，稍有头绪。了解到python对数据的处理更加简单方便，自学了python的一些基础语法及推荐的数据科学库，并分析了训练集中的数据。
