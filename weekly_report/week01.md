@@ -50,6 +50,40 @@
 #### 数据探索性分析(EDA)  
 ![amatar](https://github.com/final-Effort/laon_default_forecast/blob/master/weekly_report/src/EDA.jpg)  
 
+| Field        | Discription  |  data__type  | sample | note
+| --------     | :-----: | :----:  | :----: | :----: |
+| id           | 为贷款清单分配的唯一信用证标识      |   int     |  | 数据集主键，无缺省 |
+| loanAmnt     | 贷款金额                          |   float   |  | 数据可能较大 |
+| term         | 贷款期限（year）                  |   int  |  |  |
+| interestRate | 贷款利率  | float |   |  |
+| installment  | 分期付款金额 | float |  |  |
+| grade        | 贷款等级 | string | A,G  |  可以使用int类型代替，与下行存在信息冗余  |
+| subGrade     | 贷款等级之子级 | string | A2,G1 |  涵盖了上一行的信息，可将贷款等级删除  |
+| employmentTitle | 就业职称 | float |  | 半识别已脱敏 |
+| employmentLength | 就业年限（年）| string | 10+ year, <1 year | 需要对数据进行清洗 |
+| homeOwnership | 借款人在登记时提供的房屋所有权状况 |int |   |  |
+| aunuallncome  | 年收入 | float |   |   |
+| verificationStatus | 验证状态 | int | 0,1,2 | 这是什么，无贷款，已发放，已还款？ |
+| issueDate     | 贷款发放的月份 | string | 2017/9/1,###### | 年/月/日,###未发放？ |
+| purpose       | 借款人在贷款申请时的贷款用途类别 | int |  | 半识别，已脱敏 |
+| postCode      | 借款人在贷款申请中提供的邮政编码的前3位数字 | int | 10,237 | |
+| regionCode    | 地区编码 | int | 21,0,8 | 与上一行信息可能存在关联性 |
+| dti           | 债务收入比 | float |  | 某期间内平均债务总额与营业收入之比 |
+| deliquency_2years  | 借款人过去2年信用档案中逾期30天以上的违约事件数 | int | 0,1,2 | 与违约预测关系较大 |
+| ficoRangeLow  | 借款人在贷款发放时的fico所属的下限范围 | int |  | fico：信用分等级（信用、品德、支付能力） |
+| ficoRangeHigh | 借款人在贷款发放时的fico所属的上限范围 | int |  | 与上一行信息存在关联性 |
+| openAcc       | 借款人信用档案中未结信用额度的数量 | int |  |  |
+| pubRec        | 贬损公共记录的数量 | int |  | 信用品德 |
+| pubRecBankruptcis  | 公开记录清除的数量 | int |  | 与上一行信息存在关联性 |
+| revoBal       | 信贷周转余额合计 | float |  | |
+| revoUtil      | 循环额度利用率，或借款人使用的相对于所有可用循环信贷的信贷金额 | float |  | 单位可能是万元？ |
+| totalAcc      | 借款人信用档案中当前的信用额度总数 | int |   | 单位可能是万元？其信用等级可能影响该项 |
+| initialListStatus | 贷款的初始列表状态 | int | 0,1 | 可能是bool类型 |
+| applicationType  | 表明贷款是个人申请还是与两个共同借款人的联合申请 | int | 0,1 | 可能是bool类型，0表示个人申请 |
+| earliesCreditLine | 借款人最早报告的信用额度开立的月份 | string | Nov-74,Jul-01 | 月-日，感觉这一项可能与贷款违约无多大关系 |
+| title         | 借款人提供的贷款名称 | float |  | 半识别，已脱敏，大部分数据为0，是某类贷款吗？|
+| policyCode    | 公开可用的策略_代码=1新产品不公开可用的策略_代码=2 |int | 1,2 |  |
+| n系列匿名特征  | 匿名特征n0-n14，为一些贷款人行为计数特征的处理 |  |  |
 
 ### 数据清洗  
  - 去除/补全有缺失的数据
